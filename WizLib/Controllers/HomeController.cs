@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WizLib_Model.Models;
+using WizLib_Model.ViewModels;
 
 namespace WizLib.Controllers
 {

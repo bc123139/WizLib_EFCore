@@ -1,4 +1,4 @@
-namespace WizLib_Model.Models
+namespace WizLib_Model.ViewModels
 {
     public class ErrorViewModel
     {
