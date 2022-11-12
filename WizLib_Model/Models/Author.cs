@@ -12,6 +12,7 @@ namespace WizLib_Model.Models
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
         public string Location { get; set; }
+        public ICollection<BookAuthor> BookAuthors { get; set; } = null!;
         [NotMapped]
         public string FullName
         {

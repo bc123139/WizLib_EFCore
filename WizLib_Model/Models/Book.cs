@@ -16,5 +16,8 @@ namespace WizLib_Model.Models
         public Category Category { get; set; } = null!;
         public int BookDetailId { get; set; }
         public BookDetail BookDetail { get; set; } = null!;
+        public int PublisherId { get; set; }
+        public Publisher Publisher { get; set; } = null!;
+        public ICollection<BookAuthor> BookAuthors { get; set; } = null!;
     }
 }
