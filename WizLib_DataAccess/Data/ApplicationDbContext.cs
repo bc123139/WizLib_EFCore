@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WizLib_DataAccess.FluentConfig;
 using WizLib_Model.Models;
 
 namespace WizLib_DataAccess.Data
@@ -18,6 +19,11 @@ namespace WizLib_DataAccess.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BookAuthor>().HasKey(ba => new { ba.AuthorId, ba.BookId });
+
+            modelBuilder.ApplyConfiguration(new FluentAuthorConfig());
+            modelBuilder.ApplyConfiguration(new FluentBookConfig());
+            modelBuilder.ApplyConfiguration(new FluentBookDetailConfig());
+            modelBuilder.ApplyConfiguration(new FluentPublisherConfig());
         }
     }
 }
