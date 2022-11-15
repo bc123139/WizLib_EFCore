@@ -92,5 +92,23 @@ namespace WizLib.Controllers
             _db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult RemoveMultiple2()
+        {
+            IEnumerable<Category> catList = _db.Categories.OrderByDescending(u => u.Id).Take(2).ToList();
+
+            _db.Categories.RemoveRange(catList);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult RemoveMultiple5()
+        {
+            IEnumerable<Category> catList = _db.Categories.OrderByDescending(u => u.Id).Take(5).ToList();
+
+            _db.Categories.RemoveRange(catList);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
